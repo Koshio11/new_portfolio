@@ -1,0 +1,371 @@
+@charset "UTF-8";
+
+/* 共通 */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #f6f4cd;
+}
+
+/* へッダーエリア */
+header {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.main-vis img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-block: 30px;
+}
+
+.nav-item {
+    display: flex;
+    gap: 40px;
+}
+
+.nav ul li {
+    font-family: "Kiwi Maru", serif;
+    font-weight: 300;
+    font-style: normal;
+    list-style: none;
+}
+
+/* ボディエリア */
+.main-vis img {
+    width: 100%;
+    height: 70vw;
+    object-fit: cover;
+    border-radius: 30px;
+}
+
+/* お知らせエリア */
+.notice-wrapper {
+    background-color: aliceblue;
+    padding-bottom: 10%;
+}
+
+.notice-wrapper h2 {
+    font-family: "Kiwi Maru", serif;
+    font-weight: 300;
+    font-style: normal;
+    padding-top: 10%;
+    margin-bottom: 5%;
+    text-align: center;
+    font-size: 35px;
+    text-decoration:underline;
+    text-decoration-color: #e9d200;
+}
+
+.notice-wrapper p {
+    font-family: "Kiwi Maru", serif;
+    font-weight: 300;
+    font-style: normal;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 5%;
+    font-size: 20px;
+}
+
+
+.notice-wrapper img {
+    margin-left: 10%;
+    margin-right: 10%;
+    width: 80%;
+    height: 40%;
+    border-radius: 30px;
+}
+
+
+/* ニュースエリア */
+.news-wrapper {
+    padding-bottom: 10%;
+}
+
+.news-wrapper h2 {
+    font-family: "Kiwi Maru", serif;
+    font-weight: 300;
+    font-style: normal;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    font-size: 35px;
+    text-align: center;
+    text-decoration:underline;
+    text-decoration-color: #e9d200;
+}
+
+.news-content {
+    display: flex;
+    margin: 0 10%;
+}
+
+.news-content img {
+    width: 100%;
+    height: 80%;
+    object-fit: cover;
+    border-radius: 30px;
+}
+
+.news-content.horizontal {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.news-item {
+    flex: 1 1 calc(25% - 20px);
+    box-sizing: border-box;
+}
+
+.news-day {
+    margin: 8% 0;
+}
+
+/* 幼稚園での生活エリア */
+.life-wrapper {
+    background-color: #ffffff;
+}
+
+.life-wrapper h2 {
+    font-family: "Kiwi Maru", serif;
+    font-weight: 300;
+    font-style: normal;
+    padding-top: 10%;
+    margin-bottom: 5%;
+    text-align: center;
+    font-size: 35px;
+    text-decoration:underline;
+    text-decoration-color: #e9d200;
+}
+
+.life-item {
+    display: flex;
+    justify-content: ;
+}
+
+.life-item img {
+    width: 55%;
+}
+
+.life-title1 {
+    margin: 8% 0;
+}
+
+.life-item2 {
+    display: flex;
+}
+
+.life-item2 img {
+    width: 55%;
+}
+
+.life-txt {
+    margin: 100px 100px;
+}
+
+.life-title1 {
+    font-size: 30px;
+}
+
+.life-title2 {
+    font-size: 30px;
+}
+
+.life-txt3 {
+    display: block;
+    margin: 150px 100px;
+}
+
+.life-txt4 {
+    display: block;
+    margin: 150px 100px;
+}
+
+.life-txt1 p {
+    font-family: "Kiwi Maru", serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.life-txt2 p {
+    font-family: "Kiwi Maru", serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.life-txt4 p {
+    font-family: "Kiwi Maru", serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.life-title2 {
+    margin: 8% 0;
+}
+
+/* お問い合わせフォーム */
+.inquiry-wrapper {
+    background-color: #f0f0f0;
+    padding: 5px 100px;
+}
+
+.inquiry-content {
+    text-align: center;
+    margin: 100px 100px;
+}
+
+.inquiry-wrapper h2 {
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+
+.inquiry-txt p {
+    font-family: "Kiwi Maru", serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 25px;
+}
+
+/* フッターエリア */
+.footer-wrapper {
+    background-color: #ffe700;
+    display: flex;
+    flex-direction: row;
+}
+
+.footer-wrapper h2 {
+    font-family: "Kiwi Maru", serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.footer-pamphlet {
+    display: block;
+    margin: 100px 40px;
+}
+
+.footer-pamphlet2 {
+    display: block;
+    margin: 100px 40px;
+}
+
+.sen {
+    border:0.8px solid #000000;
+}
+
+/* レスポンシブ */
+@media (max-width: 1200px) {
+    .nav-item {
+        gap: 20px;
+    }
+
+    .news-item {
+        flex: 1 1 calc(50% - 20px);
+    }
+}
+
+@media (max-width: 768px) {
+    .nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-item {
+        flex-direction: column;
+        margin-top: 30px;
+        gap: 10px;
+    }
+
+    .news-content {
+        flex-direction: column;
+    }
+
+    .news-item {
+        flex: 1 1 100%;
+        margin-bottom: 20px;
+    }
+
+    .life-item,
+    .life-item2 {
+        flex-direction: column;
+    }
+
+    .life-item img,
+    .life-item2 img {
+        width: 100%;
+    }
+
+    .inquiry-wrapper {
+        padding: 5px 20px;
+    }
+
+    .inquiry-content,
+    .life-txt,
+    .life-txt3,
+    .life-txt4 {
+        margin: 50px 20px;
+        line-height: 30px;
+    }
+
+    .footer-pamphlet,
+    .footer-pamphlet2 {
+        margin: 50px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .notice-wrapper h2,
+    .news-wrapper h2,
+    .life-wrapper h2,
+    .inquiry-wrapper h2,
+    .footer-wrapper h2 {
+        font-size: 24px;
+        margin-bottom: 30px;
+    }
+
+    .notice-wrapper p,
+    .inquiry-txt p {
+        font-size: 18px;
+        line-height: 30px;
+        margin-top: 30px;
+    }
+
+    .life-title1,
+    .life-title2 {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-wrapper {
+        flex-direction: column;
+    }
+
+    .footer-title p {
+        line-height: 30px;
+    }
+}
+
+
+/* 黄色い丸 */
+.yellow-circle {
+    display: inline-block;
+    width: 50px; 
+    height: 50px;
+    background-color: #ffe600;
+    border-radius: 50%;
+    margin-left: 5px;
+}

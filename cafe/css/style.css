@@ -1,0 +1,347 @@
+@charset "UTF-8";
+
+/***************
+共通
+**********************/
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 20px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+
+/***************
+ヘッダーエリア
+**********************/
+.header {
+    margin: 0;
+}
+
+.menu-group {
+    margin: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    width: 90%;
+    z-index: 2;
+    position: absolute;
+}
+
+ul.menu-group {
+    padding-top: 5%;
+}
+
+
+.menu-group li {
+    z-index: 9;
+    margin-left: 5%;
+}
+
+.menu-group li a {
+    font-size: 3vw;
+    text-decoration: none;
+    font-family: "paganini-open", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #ffffff;
+}
+
+.menu-group :hover {
+    color:rgb(0, 0, 0);
+    transition-property: color;
+	transition-duration: 0.6s;
+	transition-timing-function: ease;
+	transition-delay: 0s;
+}
+
+
+
+
+/**************
+メインビジュアル
+**********************/
+.main-visual img {
+    opacity: 80%;
+    width: 100%;
+    height: auto;
+}
+
+.main-visual-wrapper {
+    position: relative;
+}
+
+
+.rogo-visual img {
+    width: 70%;
+    z-index: 100;
+    position: absolute;
+    top: 77%;
+    left: 29%;
+}
+
+
+/**************
+アバウトエリア
+**********************/
+.about-area {
+    opacity: 0;
+    transition: opacity 1s ease-out;
+}
+
+.about-area.visible {
+    opacity: 1;
+}
+
+.about h1 {
+    color: #000;
+    font-size: 80px;
+    margin: 92px;
+    margin-top: 10%;
+    text-align: center;
+    font-family: "paganini-open", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    /* 横の線↓ */
+    display: flex;
+    align-items: center;
+    /* 垂直中心 */
+    justify-content: center;
+    /* 水平中心 */
+}
+
+    /* 横の線↓ */
+.about h1:before,
+.about h1:after {
+    border-top: 1px solid;
+    content: "";
+    width: 3em;
+    /* 線の長さ */
+}
+
+.about h1:before {
+    margin-right: 1em;
+    /* 文字の右隣 */
+}
+
+.about h1:after {
+    margin-left: 1em;
+    /* 文字の左隣 */
+}
+
+
+.about-text {
+    color: #000;
+    text-align: center;
+    font-size: 27px;
+    font-style: normal;
+    line-height: normal;
+    margin-bottom: 15%;
+    font-family: "kaisei-harunoumi", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+
+/**************
+ニュースエリア
+**********************/
+.news-area {
+    margin-top: 0;
+    background: rgba(125, 94, 15, 0.30);
+}
+
+.news-area ul {
+    list-style: none;
+    font-size: 17px;
+    margin-right: 20%;
+    margin-left: 10%;
+}
+
+.news h1 {
+    margin-left: -7%;
+    transform: rotate(90deg);
+    font-size: 80px;
+    display: flex;
+    color: #ffffff;
+    font-family: "paganini-open", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.diary {
+    font-size: 25px;
+    font-family: "kaisei-harunoumi", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    border-bottom: 1px solid #ffffff;
+}
+
+.news-text {
+    font-size: 25px;
+    font-family: "kaisei-harunoumi", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    margin-left: 5%;
+    margin-bottom: 5%;
+}
+
+.news {
+    display: flex;
+    padding: 2% 0% 2% 0%;
+    justify-content: space-between;
+    font-family: "kaisei-harunoumi", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+
+/**************
+メニューエリア
+**********************/
+
+
+/* メニューエリアのスクロール */
+/* .menu-area .food, .menu-area .dessert, .menu-area .drink {
+    opacity: 0;
+    transition: opacity 2s ease;
+}
+
+.menu-area .food.show, .menu-area .dessert.show, .menu-area .drink.show {
+    opacity: 1;
+} */
+
+.menu h1 {
+    font-size: 80px;
+    margin-left: 66%;
+    margin-top: 20%;
+    margin-bottom: -10%;
+    font-family: "paganini-open", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.food img {
+    width: 20%;
+    height: 30%;
+    margin-left: 15%;
+    margin-top: 10%;
+}
+
+.dessert img {
+    width: 20%;
+    height: 30%;
+    margin-left: 40%;
+    margin-top: -50%;
+}
+
+.drink img {
+    width: 20%;
+    height: 30%;
+    margin-left: 65%;
+    margin-top: -50%;
+}
+
+
+
+/**************
+アクセスエリア
+**********************/
+.access-area {
+    margin-top: -10%;
+    background-image: url(../images/img9.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.access {
+    margin-bottom: 5%;
+}
+
+.access h1 {
+    padding-top: 5%;
+    color: #ffffff;
+    font-size: 80px;
+    text-align: center;
+    margin-top: 30%;
+    font-family: "paganini-open", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    /* 横の線↓ */
+    display: flex;
+    align-items: center;
+    /* 垂直中心 */
+    justify-content: center;
+    /* 水平中心 */
+}
+
+    /* 横の線↓ */
+.access h1:before,
+.access h1:after {
+    border-top: 1px solid;
+    content: "";
+    width: 3em;
+    /* 線の長さ */
+}
+
+.access h1:before {
+    margin-right: 1em;
+    /* 文字の右隣 */
+}
+
+.access h1:after {
+    margin-left: 1em;
+    /* 文字の左隣 */
+}
+
+.access-area p {
+    color: #ffffff;
+    font-size: 20px;
+    margin-top: 5%;
+    text-align: center;
+    line-height: 5%;
+    font-family: "kaisei-harunoumi", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.access-wrapper {
+    display: flex;
+    margin-left: 10%;
+}
+
+.map {
+    margin-bottom: 13%;
+}
+
+.access-text {
+    width: 600%;
+}
+
+.access-text p {
+    line-height: 30%;
+    font-size: 40px;
+    margin-top: 10%;
+    margin-left: 10%;
+}
+
+
+
+/**************
+フッターエリア
+**********************/
+.footer {
+    margin: 0;
+    background: rgba(125, 94, 15, 0.30);
+    size: 30%;
+}
+
+.footer img {
+    margin: 3% 20% 3% 35%;
+    width: 30%;
+}

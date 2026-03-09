@@ -1,0 +1,391 @@
+@charset "UTF-8";
+
+/********
+共通
+***************/
+body {
+    margin: 0;
+    padding: 0;
+}
+
+
+.full {
+    /* max-width: 1200px; */
+    margin: 0 auto;
+    width: 100%;
+    font-size: 18px;
+    color: #030303;
+    z-index: 1;
+    /* テキストが画像の後ろに表示されるようにZインデックスを指定 */
+    background: #FEFFE1;
+}
+
+.main {
+    margin: 0 auto;
+    background: #BCB14F;
+    margin-left: 15%;
+}
+
+
+/********
+ヘッダー
+***************/
+.navi {
+    margin-top: 2%;
+    position: absolute;
+    position: fixed;
+    padding: 0%;
+    font-size: 40px;
+    z-index: 100;
+}
+
+.hover:hover {
+    transform: scale(1.1);
+}
+
+.menu-group li {
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100px;
+    margin-right: 120%;
+    letter-spacing: 5px;
+    list-style: none;
+    padding: 0;
+}
+
+ul {
+    padding: 0;
+}
+
+.menu-item a {
+    font-size: ;
+    color: #030303;
+    font-family: 'Playfair Display', serif;
+}
+
+
+
+/********
+メインビジュアル
+***************/
+.rogo {
+    margin-left: 60%;
+    position: absolute;
+    z-index: 500;
+}
+
+.rogo img {
+    width: 100%;
+}
+
+
+.mian-visual img {
+    width: 100%;
+    height: 100%;
+    opacity: 80%;
+    z-index: 1;
+}
+
+
+/********
+ニュースエリア
+***************/
+.news-area {
+    margin-top: 17%;
+    margin-left: 10%;
+    width: 80%;
+    background: #D4D598BF;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 1s ease-out;
+}
+
+.news-area.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.news-title {
+    color: #FFF;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-family: 'Playfair Display', serif;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    font-size: 80px;
+    position: absolute;
+    margin-top: -7%;
+}
+
+.news-day {
+    color: #FFF;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-family: 'Playfair Display', serif;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-left: 5%;
+    margin-right: 5%;
+    padding-top: 10%;
+    margin-bottom: 5%;
+    border-bottom: 1px solid #ffffff;
+}
+
+.news-day2 {
+    color: #FFF;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-family: 'Playfair Display', serif;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-left: 5%;
+    margin-right: 5%;
+    border-bottom: 1px solid #ffffff;
+    margin-bottom: 5%;
+}
+
+
+.news-text {
+    color: #FFF;
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding-bottom: 5%;
+}
+
+.news-text2 {
+    color: #FFF;
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding-bottom: 5%;
+}
+
+.news-text3 {
+    color: #FFF;
+    font-family: "Kaisei HarunoUmi";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding-bottom: 10%;
+}
+
+
+
+/********
+メニュー
+***************/
+.menu-title {
+    color: #FFF;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-family: 'Playfair Display', serif;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    font-size: 80px;
+    margin-left: 65%;
+    margin-top: -15%;
+    margin-bottom: 1%;
+}
+
+.menu-area {
+    width: 100%;
+    margin-top: 30%;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 1s ease-out;
+}
+
+.menu-area img {
+    height: 450px; /* ここで希望の高さに設定 */
+    margin: auto;
+    object-fit: cover; /* 画像が指定した高さに収まるように調整 */
+}
+
+.menu-area.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.fuwasu {
+    width: 30%;
+    height: 70%;
+}
+
+.fuwasu img {
+    width: 100%;
+}
+
+
+.sand {
+    width: 70%;
+    height: 70%;
+}
+
+.sand img {
+    width: 100%;
+}
+
+
+.taru {
+    width: 70%;
+    height: 70%;
+}
+
+.taru img {
+    width: 100%;
+}
+
+
+.pai {
+    width: 30%;
+    height: 70%;
+}
+
+.pai img {
+    width: 100%;
+    /* height: 42.8vh;
+    object-fit: contain; */
+}
+
+
+
+.cake {
+    width: 30%;
+    height: 70%;
+}
+
+.cake img {
+    width: 100%;
+    /* height: 42.8vh;
+    object-fit: contain; */
+}
+
+.cro {
+    width: 70%;
+    height: 70%;
+
+}
+
+.cro img {
+    width: 100%;
+}
+
+.a1 {
+    margin-right: 10%;
+    margin-left: 10%;
+    margin-bottom: 4%;
+    display: flex;
+    gap: 5%;
+}
+
+.a2 {
+    /* width: 80%; */
+    margin-right: 10%;
+    margin-left: 10%;
+    margin-bottom: 4%;
+    display: flex;
+    gap: 5%;
+}
+
+.a3 {
+    /* width: 80%; */
+    margin-right: 10%;
+    margin-left: 10%;
+    display: flex;
+    gap: 5%;
+}
+
+
+/********
+アドレス
+***************/
+.address-area {
+    margin-top: 20%;
+}
+
+.address-title {
+    color: #FFF;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-family: 'Playfair Display', serif;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    font-size: 80px;
+    margin-top: 5%;
+    margin-bottom: 1%;
+    margin-left: 30%;
+    position: absolute;
+    z-index: 2;
+    text-shadow: 1px 1px 0 #000000,
+        -1px -1px 0 #000000,
+        -1px 1px 0 #000000,
+        1px -1px 0 #000000,
+        0px 1px 0 #000000,
+        0 -1px 0 #000000,
+        -1px 0 0 #000000,
+        1px 0 0 #000000;
+}
+
+
+.back-vis {
+    z-index: 1;
+    opacity: 80%;
+}
+
+.back-vis img {
+    width: 100%;
+    height: 100%;
+    opacity: 100%;
+    z-index: 1;
+}
+
+.address-chizu {
+    margin-left: 8%;
+    margin-top: 19%;
+    position: absolute;
+    z-index: 2;
+}
+
+.address-text {
+    margin-top: 12%;
+    color: #ffffff;
+    margin-left: 0;
+    font-family: 'Playfair Display', serif;
+    font-size: 110%;
+    line-height: 50%;
+    z-index: 2;
+    text-shadow: 1px 1px 0 #000000,
+        -1px -1px 0 #000000,
+        -1px 1px 0 #000000,
+        1px -1px 0 #000000,
+        0px 1px 0 #000000,
+        0 -1px 0 #000000,
+        -1px 0 0 #000000,
+        1px 0 0 #000000;
+}
+
+
+
+/********
+フッター
+***************/
+.foorter {
+    text-align: center;
+    background: #BCB14F;
+    padding: 3%;
+    font-family: 'Playfair Display', serif;
+}

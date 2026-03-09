@@ -1,0 +1,432 @@
+@charset "UTF-8";
+/******
+メインビジュアル＆扉
+*******************/
+/*共通*/
+body {
+    font-family: 'ヒラギノ明朝 ProN', serif;
+    padding: 0;
+    margin: 0;
+}
+/******
+メインビジュアル＆扉
+*******************/
+.main-visual {
+    background-image: url(../images/mainvisual.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+}
+.rotate {
+    width: 20%;
+    animation: rotate 5s linear infinite;
+    margin-left: 20%;
+}
+.rotate-img {
+    margin: auto;
+    margin-top: 45%;
+}
+@keyframes rotate {
+    from {
+        transform: rotateY(0deg);
+    }
+
+    to {
+        transform: rotateY(360deg);
+    }
+}
+img {
+    width: 100%;
+    object-fit: cover;
+}
+.door-wrap {
+    position: relative;
+    width: 100%;
+    display: flex;
+    padding-bottom: 50%;
+}
+.door-wrap,
+.door-back {
+    position: absolute;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%, -50%);
+}
+
+.door-position,
+.door-left {
+    margin-left: 38.3%;
+}
+.door-position,
+.door-right {
+    left: 61.5%;
+}
+
+.door-left {
+    position: absolute;
+    z-index: 1;
+    width: 23.3%;
+    height: auto;
+    transition: transform 1s ease;
+    /* トランジション時間を修正 */
+    transform: translate(-50%, -50%);
+    transform-origin: left;
+}
+
+.door-left.open {
+    transform: translate(-48%, -50%) rotateY(180deg)
+}
+
+.door-right {
+    position: absolute;
+    z-index: 1000;
+    width: 23.3%;
+    height: auto;
+    transition: transform 1s ease;
+    /* トランジション時間を修正 */
+    transform: translate(-50%, -50%);
+    transform-origin: right;
+}
+.door-right.open {
+    transform: translate(-50%, -50%) rotateY(180deg)
+}
+
+.door-left:hover,
+.door-right:hover {
+    filter: brightness(115%);
+}
+/******
+西部＆タイムス
+*******************/
+/***********
+  共通
+  ********/
+.content__wrapper {
+    width: 100%;
+    color: #3c3c3c;
+    margin: 0 auto;
+}
+
+.content__about {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: url(../images/background.png) no-repeat;
+    background-size: cover;
+}
+.text__about{
+    background-color: black;
+    border-radius: 10%;
+    margin-right: 5%;
+}
+.content__about .text__about {
+    width: 40%;
+    color: #fff;
+    -ms-writing-mode: bt-lr;
+    writing-mode: vertical-lr;
+    margin-left: 10%;
+}
+
+.content__about .text__about h2 {
+    font-size: 3vw;
+    letter-spacing: 2.5rem;
+    margin-top: 10%;
+    margin-right: 4vw;
+    margin-left: 15%;
+}
+
+.content__about .text__about p {
+    font-size: 1.5vw;
+    line-height: 300%;
+    letter-spacing: 0.8rem;
+    margin-right: 3rem
+}
+
+.content__about .text__about p span {
+    text-orientation: upright;
+}
+
+.content__about .image__about {
+    width: 50%;
+    text-align: right;
+    padding-right: 5%;
+}
+
+.content__about .image__about img {
+    width: 100%;
+}
+
+.content__menu {
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    background: url(../images/menu__background.jpg) no-repeat;
+    background-size: cover;
+    align-items: flex-start;
+    padding: 5%;
+}
+
+.item__menu {
+    width: 25%;
+    position: relative;
+    transform: rotate(-7.5deg);
+}
+
+.item__menu img {
+    width: 110%;
+}
+.text__menu{
+    top: 55%;
+}
+.item__menu .text__menu {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+}
+
+.item__menu .text__menu h4 {
+    font-size: 2.5vw;
+    margin-left: 10%;
+    margin-top: 15%;
+}
+.text__menu h4{
+    margin: 0;
+    margin-top: 15%;
+}
+.text__menu p{
+    margin: 0;
+}
+.item__menu .text__menu p {
+    font-size: 2.5vw;
+    margin-left: 10%;
+}
+
+.item__menu__alt {
+    width: 28%;
+    position: relative;
+    transform: rotate(7.5deg);
+    margin-top: 15%;
+}
+
+.item__menu__alt img {
+    width: 100%;
+}
+
+.item__menu__alt .text__menu {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+}
+
+.item__menu__alt .text__menu h4 {
+    font-size: 2.5vw;
+    top: 10%;
+}
+
+.item__menu__alt .text__menu p {
+    font-size: 2.5vw;
+}
+/****************************************タイムス**************************************************************************************/
+.contents {
+    width: 100%;
+    margin: 0 auto;
+    height: auto;
+}
+.contents-box{
+    margin: 0 auto;
+    height: 100vh;
+}
+.contents-box-taimus {
+    margin: 0 auto;
+    height: 100vh;
+}
+
+.content__wrapper {
+    width: 100%;
+    color: #3c3c3c;
+    margin: 0 auto;
+}
+
+.content__about-taimus {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: url(../images/background.png) no-repeat;
+    background-size: cover;
+}
+.text__about-taimus{
+    background-color: black;
+    border-radius: 10%;
+    margin-left: 5%;
+}
+.content__about-taimus .text__about-taimus {
+    width: 40%;
+    color: #fff;
+    -ms-writing-mode: bt-lr;
+    writing-mode: vertical-lr;
+    margin-right: 5%;
+}
+
+.content__about-taimus .text__about-taimus h2 {
+    font-size: 3vw;
+    letter-spacing: 2.5rem;
+    margin-top: 10%;
+    margin-left: 5vw;
+}
+
+.content__about-taimus .text__about-taimus p {
+    font-size: 1.5vw;
+    line-height: 300%;
+    letter-spacing: 0.6rem;
+    margin-left: 15%;
+}
+
+.content__about-taimus .text__about-taimus p span {
+    text-orientation: upright;
+}
+
+.content__about-taimus .image__about-taimus {
+    width: 50%;
+    text-align: left;
+    padding-left: 5%;
+}
+
+.content__about-taimus .image__about-taimus img {
+    width: 100%;
+    margin-right: 20%;
+}
+
+.content__menu-taimus {
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    background: url(../images/menu_background2.png) no-repeat;
+    background-size: cover;
+    align-items: flex-start;
+    padding: 5%;
+}
+
+.item__menu-taimus {
+    width: 25%;
+    position: relative;
+    transform: rotate(7.5deg);
+    margin-top: 15%;
+}
+
+.item__menu-taimus img {
+    width: 110%;
+}
+.text__menu-taimus{
+    top: 55%;
+}
+.item__menu-taimus .text__menu-taimus {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+}
+
+.item__menu-taimus .text__menu-taimus h4 {
+    font-size: 2.5vw;
+    margin-left: 10%;
+    margin-top: 15%;
+}
+.text__menu-taimus h4{
+    margin: 0;
+    margin-top: 15%;
+}
+.text__menu-taimus p{
+    margin: 0;
+}
+.item__menu-taimus .text__menu-taimus p {
+    font-size: 2.5vw;
+    margin-left: 10%;
+}
+
+.item__menu__alt-taimus {
+    width: 28%;
+    position: relative;
+    transform: rotate(-7.5deg);
+}
+
+.item__menu__alt-taimus img {
+    width: 100%;
+}
+
+.item__menu__alt-taimus .text__menu-taimus {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+}
+
+.item__menu__alt-taimus .text__menu-taimus h4 {
+    font-size: 2.5vw;
+    top: 10%;
+}
+
+.item__menu__alt-taimus .text__menu-taimus p {
+    font-size: 2.5vw;
+}
+.access {
+    background-color: #D9D9D9;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+}
+
+.address-text {
+    display: flex;
+    align-items: center;
+    margin-left: 5%;
+}
+
+.address-text h2 {
+    writing-mode: vertical-rl;
+    font-size: 2vw;
+    letter-spacing: 15px;
+    margin-bottom: 55%;
+    margin-right: 10%;
+}
+
+.address-text p {
+    writing-mode: vertical-rl;
+    font-size: 2vw;
+    letter-spacing: 30px;
+    line-height: 100px;
+    margin-right: 20%;
+}
+.access-taimus {
+    background-color: #D9D9D9;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+}
+
+.address-text-taimus {
+    display: flex;
+    align-items: center;
+    margin-right: 5%;
+}
+
+.address-text-taimus h2 {
+    writing-mode: vertical-rl;
+    font-size: 2vw;
+    letter-spacing: 15px;
+    margin-bottom: 80%;
+}
+
+.address-text-taimus p {
+    writing-mode: vertical-rl;
+    font-size: 2vw;
+    letter-spacing: 30px;
+    line-height: 100px;
+    margin-right: 15%;
+}

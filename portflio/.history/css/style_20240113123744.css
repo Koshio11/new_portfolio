@@ -1,0 +1,29 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden; /* 画像がコンテナ外にはみ出ないようにする */
+}
+
+#scrollImage {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.scrolling-text {
+    position: fixed;
+    top: 0;
+    right: 0;
+    margin-right: 30%;
+    font-size: 18px;
+    line-height: 1.5;
+    color: #fff;
+    z-index: -1; /* テキストが画像の後ろに表示されるようにZインデックスを指定 */
+}

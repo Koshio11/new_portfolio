@@ -1,0 +1,19 @@
+body {
+    margin: 0;
+    overflow: hidden;
+  }
+  
+  .container {
+    position: relative;
+    width: 100%;
+    height: 200vh; /* 画像が画面外にスクロールするための高さを設定 */
+  }
+  
+  #scrollImage {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    transition: opacity 0.5s ease; /* 透明度のアニメーションを追加 */
+  }
+  

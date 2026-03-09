@@ -1,0 +1,1040 @@
+@charset "UTF-8";
+
+/********
+共通
+*****************/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/********
+ホーム画面
+*****************/
+#scrollImage {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.scrolling-text {
+    max-width: 100%;
+    margin: 0 auto;
+    /* margin-top: 7%; */
+    /* 作品を増やすとき、下を伸ばす。 */
+    text-align: center;
+    width: 100%;
+    top: 0;
+    right: 0;
+    font-size: 18px;
+    /* テキストが画像の後ろに表示されるようにZインデックスを指定 */
+    background-color: rgb(220, 220, 220);
+}
+
+.scrolling-text img {
+    margin-top: 28%;
+    width: 100%;
+}
+
+h1 {
+    color: #000;
+    font-family: 'Shippori Mincho', serif;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    filter: drop-shadow(7px 7px 7px #aaa);
+}
+
+.web-designer {
+    font-family: BhuTuka Expanded One;
+    position: absolute;
+    z-index: 3;
+    padding-left: 25%;
+    margin-left: 18%;
+}
+
+.web-designer h2 {
+    font-size: 8vw;
+    white-space: nowrap;
+    margin-top: 0.1%;
+}
+
+h2 {
+    color: #ffffff;
+    font-family: 'Shippori Mincho', serif;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-left: 7%;
+    text-shadow: 0.25px 0.25px 0 #000000,
+        -0.25px -0.25px 0 #000000,
+        -0.25px 0.25px 0 #000000,
+        0.25px -0.25px 0 #000000,
+        0px 0.25px 0 #000000,
+        0 -0.25px 0 #000000,
+        -0.25px 0 0 #000000,
+        0.25px 0 0 #000000;
+}
+
+.koshi {
+    position: absolute;
+    z-index: 4;
+    padding-left: 8%;
+}
+
+.koshi h1 {
+    margin-left: 115%;
+    font-size: 12vw;
+    padding-top: 17%;
+    text-shadow: 0.7px 0.7px 0 #ffffff,
+        -0.7px -0.7px 0 #ffffff,
+        -0.7px 0.7px 0 #ffffff,
+        0.7px -0.7px 0 #ffffff,
+        0px 0.7px 0 #ffffff,
+        0 -0.7px 0 #ffffff,
+        -0.7px 0 0 #ffffff,
+        0.7px 0 0 #ffffff;
+}
+
+
+/******
+ポートフォリオ文字
+*****************/
+.my-portfolio {
+    font-family: 'Shippori Mincho', serif;
+    display: flex;
+    position: absolute;
+    right: 82%;
+    overflow: hidden;
+    /* text-shadow: 0.7px 0.7px 0 #ffffff,
+        -0.7px -0.7px 0 #ffffff,
+        -0.7px 0.7px 0 #ffffff,
+        0.7px -0.7px 0 #ffffff,
+        0px 0.7px 0 #ffffff,
+        0 -0.7px 0 #ffffff,
+        -0.7px 0 0 #ffffff,
+        0.7px 0 0 #ffffff; */
+}
+
+.my-portfolio ul {
+    list-style: none;
+    margin-left: 5%;
+    margin-top: 10%;
+    animation: flowing 20s linear infinite;
+}
+
+.my-portfolio ul li {
+    -ms-writing-mode: bt-1r;
+    writing-mode: vertical-lr;
+    transform: rotate(-180deg);
+    padding-top: 10%;
+    font-size: 8.5vw;
+}
+
+.contents {
+    max-width: 100%;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.42);
+    margin-left: 18%;
+    /* 画面全体の長さだと思う */
+    padding-bottom: 10%;
+}
+
+.contents img {
+    position: relative;
+    margin-top: 16%;
+}
+
+.cafe img:hover {
+    opacity: 0.7;
+}
+
+.top {
+    width: 322px;
+    height: 66.55px;
+    writing-mode: vertical-rl;
+    color: #ffffff;
+    font-family: 'Shippori Mincho', serif;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    position: fixed;
+    right: 90%;
+    margin-top: 7%;
+    z-index: 12;
+    transition: color 0.4s;
+    text-shadow: 0.25px 0.25px 0 #000000,
+        -0.25px -0.25px 0 #000000,
+        -0.25px 0.25px 0 #000000,
+        0.25px -0.25px 0 #000000,
+        0px 0.25px 0 #000000,
+        0 -0.25px 0 #000000,
+        -0.25px 0 0 #000000,
+        0.25px 0 0 #000000;
+}
+
+.top p {
+    font-size: 8.5vw;
+}
+
+.top:hover {
+    color: #272626;
+    cursor: pointer;
+    /* カーソルをポインターに変更する場合 */
+}
+
+.vertical-text {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+}
+
+
+/****
+自己紹介
+*********/
+.self-introduction {
+    background-color: #ffffff;
+    font-family: 'Shippori Mincho', serif;
+    margin-left: 17%;
+    position: absolute;
+    top: 50vw;
+    padding: 10%;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 1s ease-out;
+}
+
+.self-introduction.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.self-content {
+    font-size: 3.5vw;
+    margin-top: -10%;
+    margin-bottom: 10%;
+}
+
+.name-contents {
+    font-size: 3vw;
+    margin-top: 10%;
+    margin-bottom: 2%;
+    text-decoration: underline;
+    text-decoration-color: rgb(0, 0, 0);
+}
+
+.answer-contents {
+    font-size: 2.5vw;
+    margin-bottom: 20%;
+}
+
+.tool-contents {
+    font-size: 2vw;
+}
+
+.more {
+    margin-top: 20%;
+}
+
+.btn,
+a.btn,
+button.btn {
+    margin-top: 20%;
+    font-size: 1.6rem;
+    font-weight: 700;
+    line-height: 1.5;
+    position: relative;
+    display: inline-block;
+    padding: 1rem 4rem;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    text-align: center;
+    vertical-align: middle;
+    text-decoration: none;
+    letter-spacing: 0.1em;
+    color: #212529;
+    border-radius: 0.5rem;
+}
+
+a.btn-border {
+    margin-bottom: 12px;
+    padding: 0;
+
+    -webkit-transition: all 0.3s;
+
+    transition: all 0.3s;
+
+    border-radius: 0;
+}
+
+a.btn-border span {
+    position: relative;
+
+    display: block;
+
+    padding: 1.25rem 3rem;
+
+    color: #000;
+    border: 2px solid #000;
+    border-radius: 0.5rem;
+    background: #fff;
+}
+
+a.btn-border:before {
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+
+    display: block;
+
+    width: 98.3%;
+    height: 14px;
+
+    content: "";
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+
+    border: 2px solid #000;
+    border-top: 1px solid #000;
+    border-radius: 0 0 0.5rem 0.5rem;
+    background-image: -webkit-repeating-linear-gradient(135deg,
+            #000,
+            #000 1px,
+            transparent 2px,
+            transparent 5px);
+    background-image: repeating-linear-gradient(-45deg,
+            #000,
+            #000 1px,
+            transparent 2px,
+            transparent 5px);
+    background-size: 7px 7px;
+
+    -webkit-backface-visibility: hidden;
+
+    backface-visibility: hidden;
+}
+
+a.btn-border:hover {
+    -webkit-transform: translate(0, 3px);
+    transform: translate(0, 3px);
+}
+
+a.btn-border:hover:before {
+    bottom: -5px;
+}
+
+a.btn-border:active {
+    -webkit-transform: translate(0, 7px);
+    transform: translate(0, 7px);
+}
+
+a.btn-border:active:before {
+    bottom: -1px;
+}
+
+
+
+
+/****
+ワークスタイトル
+*********/
+.works-text h1 {
+    text-align: center;
+    font-size: 4vw;
+    font-family: 'Shippori Mincho', serif;
+    margin-top: 110%;
+}
+
+/****
+ワークエリア
+*********/
+
+.works-wraper {
+    filter: drop-shadow(10px 10px 10px #aaa);
+}
+
+.works-wraper img {
+    width: 100%;
+    filter: drop-shadow(10px 10px 10px #aaa);
+}
+
+.image-link img {
+    transition: filter 0.3s ease;
+}
+
+.image-link:hover img {
+    filter: brightness(0.8);
+}
+
+.works-wraper1 {
+    /* display,flex,grit,justify-content,align-itemsはセットで使う。 */
+    display: flex;
+    /* 横に動かす */
+    justify-content: center;
+    /* 縦に動かす */
+    align-items: center;
+    gap: 3%;
+    margin-top: 5%;
+}
+
+
+.works-wraper2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3%;
+    margin-top: 5%;
+}
+
+.works-wraper3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3%;
+    margin-top: 5%;
+}
+
+/****
+カフェサイト
+*********/
+.cafe {
+    width: 40%;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 1s ease-out;
+}
+
+.cafe-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.cafesite {
+    font-family: 'Shippori Mincho', serif;
+    margin-left: 65%;
+    position: absolute;
+    top: 80%;
+    letter-spacing: 0.3em;
+    text-shadow: 0.7px 0.7px 0 #ffffff,
+        -0.7px -0.7px 0 #ffffff,
+        -0.7px 0.7px 0 #ffffff,
+        0.7px -0.7px 0 #ffffff,
+        0px 0.7px 0 #ffffff,
+        0 -0.7px 0 #ffffff,
+        -0.7px 0 0 #ffffff,
+        0.7px 0 0 #ffffff;
+}
+
+.cafesite p {
+    /* フォントサイズはemかremを使用した方がいいらしい 
+    pxが絶対値・emが相対値。*/
+    font-size: 4em;
+}
+
+
+/****
+DEEP sinjyuku
+*********/
+.deep {
+    /* position: absolute; */
+    width: 40%;
+    margin-left: 3.5%;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 1s ease-out;
+}
+
+.deep-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.deepsite {
+    font-family: 'Shippori Mincho', serif;
+    margin-left: 63%;
+    position: absolute;
+    top: 80%;
+    text-shadow: 0.7px 0.7px 0 #ffffff,
+        -0.7px -0.7px 0 #ffffff,
+        -0.7px 0.7px 0 #ffffff,
+        0.7px -0.7px 0 #ffffff,
+        0px 0.7px 0 #ffffff,
+        0 -0.7px 0 #ffffff,
+        -0.7px 0 0 #ffffff,
+        0.7px 0 0 #ffffff;
+}
+
+.deepsite p {
+    font-size: 4em;
+}
+
+
+/****
+元ポートフォリオサイト
+*********/
+.previous {
+    /* position: absolute; */
+    width: 40%;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 2s ease-out;
+}
+
+.previous-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.previoussite {
+    font-family: 'Shippori Mincho', serif;
+    margin-left: 33%;
+    position: absolute;
+    top: 80%;
+    letter-spacing: 0.1em;
+    text-shadow: 0.7px 0.7px 0 #ffffff,
+        -0.7px -0.7px 0 #ffffff,
+        -0.7px 0.7px 0 #ffffff,
+        0.7px -0.7px 0 #ffffff,
+        0px 0.7px 0 #ffffff,
+        0 -0.7px 0 #ffffff,
+        -0.7px 0 0 #ffffff,
+        0.7px 0 0 #ffffff;
+}
+
+.previoussite p {
+    font-size: 4em;
+}
+
+
+/****
+ファッションサイト
+*********/
+.fashion {
+    /* position: absolute; */
+    width: 40%;
+    margin-left: 3.5%;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 2s ease-out;
+}
+
+.fashion-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.fashionsite {
+    font-family: 'Shippori Mincho', serif;
+    margin-left: 35%;
+    position: absolute;
+    top: 80%;
+    letter-spacing: 0.2em;
+    text-shadow: 0.7px 0.7px 0 #ffffff,
+        -0.7px -0.7px 0 #ffffff,
+        -0.7px 0.7px 0 #ffffff,
+        0.7px -0.7px 0 #ffffff,
+        0px 0.7px 0 #ffffff,
+        0 -0.7px 0 #ffffff,
+        -0.7px 0 0 #ffffff,
+        0.7px 0 0 #ffffff;
+}
+
+.fashionsite p {
+    font-size: 4em;
+}
+
+
+/****
+幼稚園サイト
+*********/
+.kindergarten {
+    /* position: absolute; */
+    width: 40%;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 3s ease-out;
+}
+
+.kindergarten-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.kindergartensite {
+    font-family: 'Shippori Mincho', serif;
+    margin-left: 35%;
+    position: absolute;
+    top: 80%;
+    letter-spacing: 0.2em;
+    text-shadow: 0.7px 0.7px 0 #ffffff,
+        -0.7px -0.7px 0 #ffffff,
+        -0.7px 0.7px 0 #ffffff,
+        0.7px -0.7px 0 #ffffff,
+        0px 0.7px 0 #ffffff,
+        0 -0.7px 0 #ffffff,
+        -0.7px 0 0 #ffffff,
+        0.7px 0 0 #ffffff;
+}
+
+.kindergartensite p {
+    font-size: 4em;
+}
+
+
+/****
+カガミロックサイト
+*********/
+.kagamirock {
+    width: 40%;
+    opacity: 0;
+    margin-left: 3.5%;
+    transform: translateY(20px);
+    transition: all 3s ease-out;
+}
+
+.kagamirock-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.kagamirocksite {
+    font-family: 'Shippori Mincho', serif;
+    margin-left: 40%;
+    position: absolute;
+    top: 80%;
+    letter-spacing: 0.1em;
+    text-shadow: 0.7px 0.7px 0 #ffffff,
+        -0.7px -0.7px 0 #ffffff,
+        -0.7px 0.7px 0 #ffffff,
+        0.7px -0.7px 0 #ffffff,
+        0px 0.7px 0 #ffffff,
+        0 -0.7px 0 #ffffff,
+        -0.7px 0 0 #ffffff,
+        0.7px 0 0 #ffffff;
+}
+
+.kagamirocksite p {
+    font-size: 4em;
+}
+
+
+
+/****
+ロゴエリア
+*********/
+.logo-text h1 {
+    text-align: center;
+    font-size: 4vw;
+    font-family: 'Shippori Mincho', serif;
+    margin-top: 20%;
+}
+
+.logo-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5%;
+    margin-top: 3%;
+}
+
+.logo-wrapper img {
+    width: 100%;
+    /* 親要素に対して100%の幅 */
+    height: auto;
+    /* アスペクト比を維持 */
+}
+
+
+.skillmaster {
+    width: 25%;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 1s ease-out;
+}
+
+.skillmaster-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.future {
+    width: 25%;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 1.6s ease-out;
+}
+
+.future-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.seahaert {
+    width: 25%;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 2.2s ease-out;
+}
+
+.seahaert-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/****
+その他エリア
+*********/
+.others-text h1 {
+    text-align: center;
+    font-size: 4vw;
+    font-family: 'Shippori Mincho', serif;
+    margin-top: 20%;
+}
+
+.others-wrapper1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3%;
+    margin-top: 3%;
+}
+
+.others-wrapper img {
+    width: 100%;
+    /* 親要素に対して100%の幅 */
+    height: auto;
+    /* アスペクト比を維持 */
+}
+
+
+/****
+厳島
+*********/
+.itukushima {
+    width: 40%;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 1s ease-out;
+}
+
+.itukushima-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.itukushimasite {
+    font-family: 'Shippori Mincho', serif;
+    margin-left: 20%;
+    position: absolute;
+    top: 80%;
+    letter-spacing: 0.3em;
+    text-shadow: 0.7px 0.7px 0 #ffffff,
+        -0.7px -0.7px 0 #ffffff,
+        -0.7px 0.7px 0 #ffffff,
+        0.7px -0.7px 0 #ffffff,
+        0px 0.7px 0 #ffffff,
+        0 -0.7px 0 #ffffff,
+        -0.7px 0 0 #ffffff,
+        0.7px 0 0 #ffffff;
+}
+
+.itukushimasite p {
+    /* フォントサイズはemかremを使用した方がいいらしい 
+    pxが絶対値・emが相対値。*/
+    font-size: 4em;
+}
+
+
+/****
+不明
+*********/
+.none {
+    /* position: absolute; */
+    width: 40%;
+    margin-left: 3.5%;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 1s ease-out;
+}
+
+.none-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.nonesite {
+    font-family: 'Shippori Mincho', serif;
+    margin-left: 65%;
+    position: absolute;
+    top: 80%;
+    text-shadow: 0.7px 0.7px 0 #ffffff,
+        -0.7px -0.7px 0 #ffffff,
+        -0.7px 0.7px 0 #ffffff,
+        0.7px -0.7px 0 #ffffff,
+        0px 0.7px 0 #ffffff,
+        0 -0.7px 0 #ffffff,
+        -0.7px 0 0 #ffffff,
+        0.7px 0 0 #ffffff;
+}
+
+.nonesite p {
+    font-size: 4em;
+}
+
+
+/****
+フッターエリア
+*********/
+.footer {
+    position: relative;
+    background-color: #272626;
+    text-align: center;
+    padding: 12% 12% 12% 12%;
+}
+
+.footer p {
+    font-family: 'Shippori Mincho', serif;
+    color: #ffffff;
+    font-size: 4vw;
+}
+
+
+/* レスポンシブ */
+@media (max-width: 767px) {
+    contents img {
+        width: 100vw;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    /* 480px以下に適用されるCSS（スマホ用） */
+
+    /* 自己紹介 */
+    .self-introduction {
+        width: 50%;
+        margin: 0 auto;
+        left: 24%;
+    }
+
+    .self-introduction p {
+        font-size: 4vw;
+    }
+
+    .btn,
+    a.btn,
+    button.btn {
+        margin-top: 20%;
+        font-size: 0.8rem;
+        font-weight: 700;
+        line-height: 1.5;
+        position: relative;
+        display: inline-block;
+        padding: 1rem 4rem;
+        cursor: pointer;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        -webkit-transition: all 0.3s;
+        transition: all 0.3s;
+        text-align: center;
+        vertical-align: middle;
+        text-decoration: none;
+        letter-spacing: 0.1em;
+        color: #212529;
+        border-radius: 0.5rem;
+    }
+
+    a.btn-border {
+        margin-bottom: 12px;
+        padding: 0;
+
+        -webkit-transition: all 0.3s;
+
+        transition: all 0.3s;
+
+        border-radius: 0;
+    }
+
+    a.btn-border span {
+        position: relative;
+
+        display: block;
+
+        padding: 0.7rem 1.7rem;
+
+        color: #000;
+        border: 2px solid #000;
+        border-radius: 0.5rem;
+        background: #fff;
+    }
+
+    a.btn-border:before {
+        position: absolute;
+        bottom: -8px;
+        left: 0;
+
+        display: block;
+
+        width: 97%;
+        height: 14px;
+
+        content: "";
+        -webkit-transition: all 0.3s;
+        transition: all 0.3s;
+
+        border: 2px solid #000;
+        border-top: 1px solid #000;
+        border-radius: 0 0 0.5rem 0.5rem;
+        background-image: -webkit-repeating-linear-gradient(135deg,
+                #000,
+                #000 1px,
+                transparent 2px,
+                transparent 5px);
+        background-image: repeating-linear-gradient(-45deg,
+                #000,
+                #000 1px,
+                transparent 2px,
+                transparent 5px);
+        background-size: 7px 7px;
+
+        -webkit-backface-visibility: hidden;
+
+        backface-visibility: hidden;
+    }
+
+    a.btn-border:hover {
+        -webkit-transform: translate(0, 3px);
+        transform: translate(0, 3px);
+    }
+
+    a.btn-border:hover:before {
+        bottom: -5px;
+    }
+
+    a.btn-border:active {
+        -webkit-transform: translate(0, 7px);
+        transform: translate(0, 7px);
+    }
+
+    a.btn-border:active:before {
+        bottom: -1px;
+    }
+
+    /* サイト一覧 */
+    .works-text h1 {
+        margin-top: 170%;
+        font-size: 6vw;
+    }
+
+    .cafe,
+    .deep,
+    .previous,
+    .fashion,
+    .kindergarten,
+    .kagamirock {
+        width: 80%;
+        margin: auto;
+        margin-bottom: 10%;
+    }
+
+    .cafesite,
+    .deepsite,
+    .previoussite,
+    .fashionsite,
+    .kindergartensite,
+    .kagamirocksite {
+        margin-top: -5%;
+        right: 0.1vw;
+    }
+
+    .cafesite p,
+    .deepsite p,
+    .previoussite p,
+    .fashionsite p,
+    .kindergartensite p,
+    .kagamirocksite p {
+        font-size: 2.8em;
+    }
+
+    .works-wraper1,
+    .works-wraper2,
+    .works-wraper3 {
+        display: block;
+        width: 100%;
+    }
+
+    .skillmaster,
+    .future,
+    .seahaert {
+        width: 70%;
+        margin: auto;
+    }
+
+    /* ロゴ一覧 */
+    .logo-text h1 {
+        margin-top: 40%;
+        font-size: 6vw;
+    }
+
+    .logo-wrapper {
+        display: block;
+    }
+
+    .logo-wrapper img {
+        width: 100%;
+    }
+
+    .skillmaster,
+    .future,
+    .seahaert img {
+        margin-bottom: 8%;
+    }
+
+    /* その他一覧 */
+    /* .others-wrapper1 {
+        display: flex;
+        gap: 3%;
+        margin-top: 3%;
+        flex-direction: column;
+        width: 20%;
+    } */
+
+    .others-text h1 {
+        margin-top: 30%;
+        font-size: 6vw;
+    }
+
+    .others-wrapper1 {
+        display: block;
+        width: 100%;
+        margin-bottom: 20%;
+    }
+
+    .itukushima,
+    .none {
+        width: 80%;
+        margin: auto;
+    }
+
+    .none {
+        margin-block: 10%;
+    }
+
+    .itukushimasite,
+    .nonesite {
+        right: 1vw;
+    }
+
+    .itukushimasite p,
+    .nonesite p {
+        font-size: 2em;
+    }
+}

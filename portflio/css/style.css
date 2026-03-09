@@ -1,0 +1,453 @@
+@charset "UTF-8";
+
+/********
+共通
+*****************/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+@media (max-width: 768px) {
+    .scrolling-text {
+        width: 100vw; /* ビューポートの幅全体 */
+        height: 100vh; /* ビューポートの高さ全体 */
+        position: fixed; /* 画面に固定 */
+        top: 0;
+        left: 0;
+        overflow-y: scroll; /* 内容が多い場合はスクロール可能 */
+        z-index: 1000; /* 他の要素より前面に表示 */
+    }
+}
+
+/********
+ローディング画面
+*****************/
+.loader {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-color: #000000;
+    z-index: 555;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* 初期状態の透明度 */
+    opacity: 1;
+    /* アニメーション設定 */
+    transition: opacity 8s ease-out;
+    /* その他のスタイリング（位置、サイズなど） */
+    z-index: 1000;
+    /* 最前面に表示 */
+}
+
+.loader .txt {
+    font-family: BhuTuka Expanded One;
+    font-size: 45px;
+    font-weight: bold;
+    color: rgb(230, 230, 230);
+    margin-bottom: 5%;
+}
+
+/********
+テレビ
+*****************/
+.universe-tv {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    /* 画像がコンテナ外にはみ出ないようにする */
+    z-index: 9999;
+    pointer-events: none;
+}
+
+.universe-tv img {
+    width: 100%;
+    height: 100%;
+}
+
+/*******
+UFO
+***************/
+@keyframes float {
+    0% {
+        transform: translatey(0px);
+    }
+
+    50% {
+        transform: translatey(-20px);
+    }
+
+    100% {
+        transform: translatey(0px);
+    }
+}
+
+.ufo {
+    position: fixed;
+    z-index: 10000;
+    margin-top: 27%;
+    margin-left: 3%;
+}
+
+.ufo img {
+    width: 70%;
+    animation: float 2s ease-in-out infinite;
+}
+
+/*******
+宇宙飛行士
+***************/
+.menukunn {
+    position: fixed;
+    z-index: 10001;
+    margin-top: 9%;
+    margin-left: 80%;
+}
+
+.menukunn img {
+    width: 100%;
+    animation: float 3s ease-in-out infinite;
+}
+
+/********
+ホーム画面
+*****************/
+#scrollImage {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.scrolling-text {
+    max-width: 45%;
+    margin: 0 auto;
+    margin-top: 7%;
+    /* 作品を増やすとき、下を伸ばす。 */
+    padding-bottom: 5%;
+    text-align: center;
+    width: 100%;
+    top: 0;
+    right: 0;
+    font-size: 18px;
+    color: #030303;
+    z-index: 1;
+    /* テキストが画像の後ろに表示されるようにZインデックスを指定 */
+    background-color: #B6B6B6;
+}
+
+.scrolling-text img {
+    margin-top: 28%;
+    width: 100%;
+}
+
+h1 {
+    color: #000;
+    font-family: 'Shippori Mincho', serif;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.web-designer {
+    font-family: BhuTuka Expanded One;
+    position: absolute;
+    z-index: 3;
+    padding-left: 8.5%;
+}
+
+.web-designer h2 {
+    font-size: 3.6vw;
+    white-space: nowrap;
+    margin-top: 5%;
+    margin-left: 12%;
+}
+
+h2 {
+    color: #ffffff;
+    font-family: 'Shippori Mincho', serif;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-left: 7%;
+}
+
+.koshi {
+    position: absolute;
+    z-index: 4;
+    padding-left: 8%;
+}
+
+.koshi h1 {
+    margin-left: 38%;
+    font-size: 7vw;
+    padding-top: 18%;
+    text-shadow: 0.5px 0.5px 0 #ffffff,
+        -0.5px -0.5px 0 #ffffff,
+        -0.5px 0.5px 0 #ffffff,
+        0.5px -0.5px 0 #ffffff,
+        0px 0.5px 0 #ffffff,
+        0 -0.5px 0 #ffffff,
+        -0.5px 0 0 #ffffff,
+        0.5px 0 0 #ffffff;
+}
+
+
+/******
+ポートフォリオ文字
+*****************/
+.my-portfolio {
+    font-family: 'Shippori Mincho', serif;
+    display: flex;
+    position: absolute;
+    z-index: 1;
+    right: 64%;
+}
+
+.my-portfolio ul {
+    list-style: none;
+    margin-left: 5%;
+    margin-top: 10%;
+    animation: flowing 20s linear infinite;
+}
+
+.my-portfolio ul li {
+    -ms-writing-mode: bt-1r;
+    writing-mode: vertical-lr;
+    transform: rotate(-180deg);
+    padding-top: 10%;
+    font-size: 4vw;
+}
+
+.contents {
+    background: rgba(34, 121, 132, 0.42);
+    margin-left: 20%;
+    /* 画面全体の長さだと思う */
+    padding-bottom: 170%;
+}
+
+.contents img {
+    position: relative;
+}
+
+.cafe img:hover {
+    opacity: 0.7;
+}
+
+.top {
+    width: 322px;
+    height: 66.55px;
+    writing-mode: vertical-rl;
+    color: #ffffff;
+    font-family: 'Shippori Mincho', serif;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    position: fixed;
+    right: 66.3%;
+    margin-top: 7%;
+    z-index: 12;
+    text-shadow: 0.5px 0.5px 0 #000000,
+        -0.5px -0.5px 0 #000000,
+        -0.5px 0.5px 0 #000000,
+        0.5px -0.5px 0 #000000,
+        0px 0.5px 0 #000000,
+        0 -0.5px 0 #000000,
+        -0.5px 0 0 #000000,
+        0.5px 0 0 #000000;
+}
+
+.top p {
+    font-size: 5vw;
+}
+
+.top:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+.vertical-text {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+}
+
+
+/****
+自己紹介
+*********/
+.self-introduction {
+    background-color: #D9D9D9;
+    font-family: 'Shippori Mincho', serif;
+    margin-left: 3%;
+    position: absolute;
+    top: 70%;
+    padding: 5%;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 1s ease-out;
+}
+
+.self-introduction.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.self-content {
+    font-size: 2vw;
+    margin-top: -10%;
+    margin-bottom: 10%;
+}
+
+.name-contents {
+    font-size: 2vw;
+    margin-top: 10%;
+    margin-bottom: 2%;
+    text-decoration: underline;
+    text-decoration-color: rgb(0, 0, 0);
+}
+
+.answer-contents {
+    font-size: 1.6vw;
+    margin-bottom: 20%;
+}
+
+.tool-contents {
+    font-size: 1.6vw;
+}
+
+
+
+/****
+ワークスタイトル
+*********/
+.works-text h1 {
+    text-align: center;
+    font-size: 2vw;
+    font-family: 'Shippori Mincho', serif;
+    margin-top: 140%;
+    margin-right: 5%;
+}
+
+
+/****
+カフェサイト
+*********/
+.cafe {
+    position: absolute;
+    width: 28%;
+    margin-left: 3.5%;
+    top: 165%;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 1s ease-out;
+}
+
+.cafe-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.cafesite {
+    z-index: 80;
+    font-family: 'Shippori Mincho', serif;
+    margin-left: 35%;
+    position: absolute;
+    top: 83%;
+    width: 73%;
+    text-shadow: 0.7px 0.7px 0 #ffffff,
+        -0.7px -0.7px 0 #ffffff,
+        -0.7px 0.7px 0 #ffffff,
+        0.7px -0.7px 0 #ffffff,
+        0px 0.7px 0 #ffffff,
+        0 -0.7px 0 #ffffff,
+        -0.7px 0 0 #ffffff,
+        0.7px 0 0 #ffffff;
+}
+
+.cafesite p {
+    font-size: 4vw;
+}
+
+
+/****
+ファッションサイト
+*********/
+.fashion {
+    position: absolute;
+    width: 28%;
+    margin-left: 3.5%;
+    top: 215%;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 1s ease-out;
+}
+
+.fashion-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.fashionsite {
+    z-index: 85;
+    font-family: 'Shippori Mincho', serif;
+    margin-left: 35%;
+    position: absolute;
+    top: 83%;
+    width: 73%;
+    text-shadow: 0.7px 0.7px 0 #ffffff,
+        -0.7px -0.7px 0 #ffffff,
+        -0.7px 0.7px 0 #ffffff,
+        0.7px -0.7px 0 #ffffff,
+        0px 0.7px 0 #ffffff,
+        0 -0.7px 0 #ffffff,
+        -0.7px 0 0 #ffffff,
+        0.7px 0 0 #ffffff;
+}
+
+.fashionsite p {
+    font-size: 4vw;
+}
+
+
+/****
+美容室バナー
+*********/
+.beauty {
+    position: absolute;
+    width: 28%;
+    margin-left: 3.5%;
+    top: 265%;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 1s ease-out;
+}
+
+.beauty-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.beautysalon {
+    z-index: 80;
+    font-family: 'Shippori Mincho', serif;
+    margin-left: 23%;
+    position: absolute;
+    top: 83%;
+    width: 73%;
+    text-shadow: 0.7px 0.7px 0 #ffffff,
+        -0.7px -0.7px 0 #ffffff,
+        -0.7px 0.7px 0 #ffffff,
+        0.7px -0.7px 0 #ffffff,
+        0px 0.7px 0 #ffffff,
+        0 -0.7px 0 #ffffff,
+        -0.7px 0 0 #ffffff,
+        0.7px 0 0 #ffffff;
+}
+
+.beautysalon p {
+    font-size: 4vw;
+}
